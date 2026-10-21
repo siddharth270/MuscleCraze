@@ -1,0 +1,27 @@
+[project]
+name = "musclecraze-api"
+version = "0.1.0"
+description = "MuscleCraze fitness tracker API"
+readme = "README.md"
+authors = [
+    { name = "Siddharth Mehta", email = "66232143+siddharth270@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.156.4",
+    "pydantic-settings>=2.16.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.15.1",
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
